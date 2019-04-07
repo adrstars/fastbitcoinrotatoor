@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>All list</title>
+<style type="text/css">
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   scrollbar-face-color: #ECE9D8;
+   scrollbar-arrow-color: #000000;
+   scrollbar-3dlight-color: #ECE9D8;
+   scrollbar-darkshadow-color: #716F64;
+   scrollbar-highlight-color: #FFFFFF;
+   scrollbar-shadow-color: #ACA899;
+   scrollbar-track-color: #D4D0C8;
+}
+</style>
+<style type="text/css">
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+</style>
+<link rel="stylesheet" href="./cupertino/jquery.ui.all.css" type="text/css">
+<style type="text/css">
+#InlineFrame1
+{
+   border: 1px #C0C0C0 solid;
+}
+#MegaMenu1
+{
+   float: left;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   font-family: Arial;
+   font-size: 20px;
+}
+#MegaMenu1 li
+{
+   float: left;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+#MegaMenu1 li a
+{
+   float: left;
+}
+#MegaMenu1 li .submenu
+{
+   display: none;
+   float: left;
+   left: 0;
+   padding: 15px 15px 15px 15px;
+   position: absolute;
+   top: 0;
+}
+#MegaMenu1 li .row
+{
+   clear: both;
+   float: left;
+   margin-bottom: 10px;
+   width: 100%;
+}
+#MegaMenu1 li .submenu ul
+{
+   float: left;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width: 150px;
+}
+#MegaMenu1 .submenu ul li
+{
+   width: 100%;
+}
+#MegaMenu1 .submenu ul li h2
+{
+   font-family: Arial;
+   font-size: 20px;
+   font-weight: bold;
+   font-style: normal;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+}
+#MegaMenu1 .submenu ul li h2 a
+{
+   background-image: none;
+   background-color: transparent;
+   border-width: 0;
+   font-weight: bold;
+   font-style: normal;
+   padding: 5px 0;
+   text-decoration: none;
+}
+#MegaMenu1 .submenu ul li h2 a:hover
+{
+   padding: 5px 0;
+}
+#MegaMenu1 .submenu ul li a
+{
+   display: block;
+   float: none;
+   font-weight: normal;
+   font-style: normal;
+   height: auto;
+   padding: 7px 5px 7px 15px;
+   text-decoration: none;
+   text-indent: 0;
+}
+#MegaMenu1 .submenu ul li a:hover
+{
+   padding: 6px 4px 6px 14px;
+}
+#MegaMenu1 .submenu ul li a .ui-icon
+{
+   left: 0;
+   margin-top: -8px;
+   position: absolute;
+   top: 50%;
+}
+#MegaMenu1 .button
+{
+   cursor: pointer;
+   font-weight: normal;
+   font-style: normal;
+   margin: 0 5px 0 0;
+   outline: 0;
+   padding: 4px 20px 4px 8px;
+   position: relative;
+   text-align: center;
+   text-decoration: none !important;
+   color: #2779AA;
+}
+#MegaMenu1 .button:hover
+{
+   color: #0070A3;
+}
+#MegaMenu1 .button:active
+{
+   color: #FFFFFF;
+}
+#MegaMenu1 .button .ui-icon
+{
+   left: auto;
+   margin-top: -8px;
+   margin-left: 0;
+   position: absolute;
+   right: 4px;
+   top: 50%;
+}
+</style>
+<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $('#MegaMenu1 .submenu ul li h2 a').addClass('ui-widget-header');
+   $('#MegaMenu1 .submenu ul li a').hover(function()
+   {
+      $(this).addClass('ui-state-default');
+   }, function()
+   {
+      $(this).removeClass('ui-state-default');
+   });
+   $('.ui-state-default').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('#MegaMenu1 li').hover(function()
+   {
+      var top = $(this).find('.button').outerHeight();
+      $(this).find('.submenu').css( {'top': top });
+      $(this).find('.submenu').show();
+      if ($(this).find('.row').length > 0 )
+      {
+         var maxRowWidth = 0;
+         $(this).find('.row').each(function()
+         {
+            var width = 0;
+            $(this).find('ul').each(function()
+            {
+               width += $(this).width();
+            });
+            if (width > maxRowWidth)
+            {
+               maxRowWidth = width;
+            }
+         });
+         $(this).find('.submenu').css({'width' : maxRowWidth});
+         $(this).find('.row:last').css({'margin': '0'});
+      }
+      else
+      {
+         var width = 0;
+         $(this).find('ul').each(function()
+         {
+            width += $(this).width();
+         });
+         $(this).find('.submenu').css({'width' : width});
+      }
+      $(this).find('.submenu').slideDown();
+   }, function()
+   {
+      $(this).find('.submenu').hide();
+   })
+   $('#MegaMenu1 li .submenu').hide();
+});
+</script>
+</head>
+<body>
+<iframe name="InlineFrame1" id="InlineFrame1" style="position:absolute;left:0px;top:40px;width:1088px;height:1598px;z-index:0;" src="./page1.html" frameborder="0"></iframe>
+<div id="wb_MegaMenu1" style="position:absolute;left:10px;top:0px;width:1058px;height:47px;z-index:1;">
+   <ul class="ui-widget" id="MegaMenu1">
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Payment to your wallet</a>
+      <div class="submenu ui-widget-content">
+         <ul style="width:680px">
+            <li><h2><a href="#">12 website</a></h2></li>
+            <li><a href="http://easybitcoinfaucet.com/?r=b31d1ce7b5" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>easy bitcoin faucet (120 to 356 satoshi every 10m)</a></li>
+            <li><a href="http://claimbtc.com/?r=e2c5a1cec6" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>claim btc  (222 to 580 satoshi every 20m)</a></li>
+            <li><a href="http://takefreebitcoin.com/?r=75f64a902b" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>take free bitcoin  (106 to 268 satoshi every 5m)</a></li>
+            <li><a href="http://bonusbitcoin.co/?ref=FB0FDEDEAB50" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>bonusbitcoin.co  up to 5,000 satoshi every 15 minute</a></li>
+            <li><a href="http://freebitco.in/?r=2166904" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span> freebitco.in ( 467 to 44711721 satoshi every 1 Hour )</a></li>
+            <li><a href="http://btcclicks.com/?r=11c100a1" target="_blank"><span class="ui-icon ui-icon-triangle-1-e"></span>btcclicks.com (Earn up to 0.00954 mBTC per click) >></a></li>
+            <li><a href="http://bitter.io/?r=138078" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>bitter.io (earn more bitcoins by visiting sites on the left panel)</a></li>
+            <li><a href="https://adbit.co/?r=X45pLZgvikZP21khAj449s5BFaogqZ" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>adbit.co ( up to 5,000 satoshis every 60 minutes) </a></li>
+            <li><a href="https://freebitcoingame.com/?r=48176" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>freebitcoingame.com   ( up to 0.27508163 BTC satoshis every 60 minutes)</a></li>
+            <li><a href="http://www.bitcoinaliens.com/faucet?ref=nonfb-56cef5126ad27" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>bitcoinaliens.com (up to 4,338 satoshi per claim every 5 minutes)  </a></li>
+            <li><a href="http://your-bit.co.in/?r=3034" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span> your-bit.co.in  (1000satoshi 111minutes)</a></li>
+            <li><a href="https://satoshinow.com/?ref=103452" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>satoshinow.com</a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Payment to faucetbox.com</a>
+      <div class="submenu ui-widget-content">
+         <ul style="width:496px">
+            <li><h2><a href="#">17 website</a></h2></li>
+            <li><a href="http://hitpxl.com/index.php?ref=adrstars" target="_blank"><span class="ui-icon ui-icon-triangle-1-e"></span>1- hitpxl.com (100 satoshis 3 m)  >></a></li>
+            <li><a href="http://www.freefaucetbitco.in/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>2- freefaucetbitco.in (new )</a></li>
+            <li><a href="http://charitybitcoin.org/?id=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>3- charitybitcoin.org (new)</a></li>
+            <li><a href="http://dailyfreebits.com/?id=11340358" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>4- dailyfreebits</a></li>
+            <li><a href="http://www.bitcoinerz.eu/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>6- bitcoinerz.eu</a></li>
+            <li><a href="http://www.satoshididu.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>7- satoshididu.com</a></li>
+            <li><a href="http://www.freebitcoins4u.co.uk/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>8- freebitcoins4u.co.uk</a></li>
+            <li><a href="http://www.bitstap.com/index.php/?id=169430" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>9- bitstap.com</a></li>
+            <li><a href="http://bitcoinshowers.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>10- bitcoinshowers.com</a></li>
+            <li><a href="http://fallingbtc.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>11- fallingbtc.com</a></li>
+            <li><a href="http://btcboom.xyz/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>12- btcboom.xyz</a></li>
+            <li><a href="http://www.pentafaucet.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>13- pentafaucet.com</a></li>
+            <li><a href="http://itsrainingbitcoins.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>14- itsrainingbitcoins.com</a></li>
+            <li><a href="http://winfreesatoshi.xyz/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>15- winfreesatoshi.xyz (222 satoshis to 3333 60m )</a></li>
+            <li><a href="http://www.siizo.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>16- siizo.com</a></li>
+            <li><a href="http://oneadfaucet.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>17- oneadfaucet.com 600 satoshis in 800m</a></li>
+            <li><a href="https://mybitcoinads.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>18 - mybitcoinads.com 100 satoshi every sec</a></li>
+            <li><a href="http://www.thebitcoinsheep.com/BTC/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>19- thebitcoinsheep (500 satoshi every 30 minutes)</a></li>
+            <li><a href="http://bitcoinker.com/faucet?ref=70fa0dc2d5f2" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>20- bitcoinker (300 satoshi 15m)</a></li>
+            <li><a href="http://bitcobear.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>21- bitcobear.com ( 250 satoshi every 1440 minutes )</a></li>
+            <li><a href="http://www.wytewolfbtc.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>22- wytewolfbtc.com</a></li>
+            <li><a href="http://www.crystalbit.cz/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr " target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>23- crystalbit.cz</a></li>
+            <li><a href="http://charitybitcoin.org/?id=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>24-  charitybitcoin.org ( 200 satoshis 5m)  New </a></li>
+            <li><a href="http://www.freebitcoinfaucet.co.uk/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>25- .freebitcoinfaucet.co.uk (new)</a></li>
+            <li><a href="http://rimibtc.com/index.php?ref=adrstars" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>26-Rrimibtc.com New ! </a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Payment to XABO wallet</a>
+      <div class="submenu ui-widget-content">
+         <ul style="width:551px">
+            <li><h2><a href="#">12 website</a></h2></li>
+            <li><a href="http://moonbit.co.in/?ref=7aa17f92bdbc" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>01-  moonbit.co.in up to 800satoshi every claim</a></li>
+            <li><a href="http://bitcoinzebra.com/?ref=cc45aa96a244" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>02- bitcoinzebra (up to 3000 satoshi every hour)</a></li>
+            <li><a href="http://www.onoxvo.es/faucet/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>03- onoxvo.es (up to 1000 every 45 m)</a></li>
+            <li><a href="http://sunbitcoin.com/?r=3CBLgdLcpxsAXovCvBMnQ6d53Wfjids1Ai" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>04-  sunbitcoin.com  (20.000 Satoshis every 5m )</a></li>
+            <li><a href="http://jupiterbitcoin.com/?r=3CBLgdLcpxsAXovCvBMnQ6d53Wfjids1Ai" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>05- jupiterbitcoin.com also(20.000 Satoshis every 5m )</a></li>
+            <li><a href="http://goldcoinjar.com/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>06- goldcoinjar.com ( 200 and 5000 satoshi each 5 minutes)</a></li>
+            <li><a href="http://www.bankcoin.eu/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>07- bankcoin.eu (300 Satoshis - 15 m)</a></li>
+            <li><a href="https://www.ganabitsdiarios.com/?r=adrstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>08- ganabitsdiarios.com (3000 Satoshis  in 20 m)</a></li>
+            <li><a href="http://aliensbitcoin.eu/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>09- aliensbitcoin.eu (up to 10000 every 60m)</a></li>
+            <li><a href="http://www.animalscoin.eu/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>10- animalscoin.eu  (300 satoshi every 15 minutes)</a></li>
+            <li><a href="http://www.storesxbox.es/faucet/?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>11- storesxbox.es (1000 satoshis - 30 minutes )</a></li>
+            <li><a href="http://xapobtc.com/math.php?r=ADRstars@gmail.com" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>12- xapobtc.com (1000 satoshis per hour )</a></li>
+            <li><a href="http://www.bitcoinraccoon.com/?ref=575f1086711ae" target="InlineFrame1"><span class="ui-icon ui-icon-triangle-1-e"></span>13- bitcoin raccoon (use Xapo  Email) </a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Minining - invest Bitcoin</a>
+      <div class="submenu ui-widget-content">
+         <ul style="width:563px">
+            <li><h2><a href="#">3 website</a></h2></li>
+            <li><a href="https://hashocean.com/signup/?rid=401521" target="_blank"><span class="ui-icon ui-icon-triangle-1-e"></span>1- Hashocean (The Best One) +15KH free</a></li>
+            <li><a href="https://coince.com/?u=C0167451" target="_blank"><span class="ui-icon ui-icon-triangle-1-e"></span>2- coince.com  (3% every day)</a></li>
+            <li><a href="https://www.genesis-mining.com/a/311440" target="_blank"><span class="ui-icon ui-icon-triangle-1-e"></span>3- Genesis-mining  (use " MiDBHI " to get -3% in power buy )</a></li>
+         </ul>
+      </div>
+      </li>
+   </ul>
+</div>
+<div style="z-index:2">
+<script type="text/javascript">
+<!--
+var disabled_message = "No ! please .";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+// -->
+</script>
+</div>
+</body>
+</html>

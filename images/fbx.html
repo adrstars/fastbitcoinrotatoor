@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>All list</title>
+<meta name="generator" content="WYSIWYG Web Builder 11 Trial Version - http://www.wysiwygwebbuilder.com">
+<link href="cupertino/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="bitcoin_rotator_by_v8.css" rel="stylesheet" type="text/css">
+<link href="fbx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $('#MegaMenu1 .submenu ul li h2 a').addClass('ui-widget-header');
+   $('#MegaMenu1 .submenu ul li a').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('.ui-state-default').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('#MegaMenu1 li').hover(function()
+   {
+      var top = $(this).find('.button').outerHeight();
+      $(this).find('.submenu').css( {'top': top });
+      $(this).find('.submenu').show();
+      var maxWidth = 0;
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').each(function()
+         {
+            $(this).css('width', 'auto');
+            if ($(this).width() > maxWidth)
+               maxWidth = $(this).width();
+         });
+      });
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').width(maxWidth);
+         $(this).css({'width' : maxWidth+4});
+      });
+      if ($(this).find('.row').length > 0 )
+      {
+         var maxRowWidth = 0;
+         $(this).find('.row').each(function()
+         {
+            var width = 0;
+            $(this).find('ul').each(function()
+            {
+               width += $(this).width();
+            });
+            if (width > maxRowWidth)
+            {
+               maxRowWidth = width;
+            }
+         });
+         $(this).find('.submenu').css({'width' : maxRowWidth});
+         $(this).find('.row:last').css({'margin': '0'});
+      }
+      else
+      {
+         var width = 0;
+         $(this).find('ul').each(function()
+         {
+            width += $(this).width();
+         });
+         $(this).find('.submenu').css({'width' : width});
+      }
+      $(this).find('.submenu').slideDown();
+   }, function()
+   {
+      $(this).find('.submenu').hide();
+   })
+   $('#MegaMenu1 li .submenu').hide();
+});
+</script>
+</head>
+<body>
+<iframe name="InlineFrame1" id="InlineFrame1" style="position:absolute;left:0px;top:40px;width:1088px;height:1598px;z-index:0;" src="./page1.html" frameborder="0"></iframe>
+<div id="wb_MegaMenu1" style="position:absolute;left:10px;top:0px;width:1056px;height:45px;z-index:1;">
+   <ul class="ui-widget" id="MegaMenu1">
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Direct Pay</a>
+      <div class="submenu ui-widget-content">
+         <ul>
+            <li><h2>12 website</h2></li>
+            <li><a href="http://bonusbitcoin.co/?ref=FB0FDEDEAB50" target="InlineFrame1" title="bonusbitcoin.co  up to 5,000 satoshi every 15 minute"><span class="ui-icon ui-icon-triangle-1-e"></span>bonusbitcoin.co  up to 5,000 satoshi every 15 minute</a></li>
+            <li><a href="http://freebitco.in/?r=2166904" target="InlineFrame1" title="freebitco.in ( 467 to 44711721 satoshi every 1 Hour )"><span class="ui-icon ui-icon-triangle-1-e"></span>freebitco.in ( 467 to 44711721 satoshi every 1 Hour )</a></li>
+            <li><a href="http://btcclicks.com/?r=11c100a1" target="_blank" title="btcclicks.com (Earn up to 0.00954 mBTC per click) &gt;&gt;"><span class="ui-icon ui-icon-triangle-1-e"></span>btcclicks.com (Earn up to 0.00954 mBTC per click) >></a></li>
+            <li><a href="http://bitter.io/?r=138078" target="InlineFrame1" title="bitter.io (earn more bitcoins by visiting sites on the left panel)"><span class="ui-icon ui-icon-triangle-1-e"></span>bitter.io (earn more bitcoins by visiting sites on the left panel)</a></li>
+            <li><a href="http://bitfun.co/?ref=25E8B502F40C" target="InlineFrame1" title="bitfun.co"><span class="ui-icon ui-icon-triangle-1-e"></span>bitfun.co</a></li>
+            <li><a href="https://bitcoinker.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="bitcoinker"><span class="ui-icon ui-icon-triangle-1-e"></span>bitcoinker</a></li>
+            <li><a href="http://www.bitcoinbow.com/r=YgmU0mYR" target="InlineFrame1" title="bitcoinbow"><span class="ui-icon ui-icon-triangle-1-e"></span>bitcoinbow</a></li>
+            <li><a href="http://cryptoaddicted.biz/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="cryptoaddicted.biz"><span class="ui-icon ui-icon-triangle-1-e"></span>cryptoaddicted.biz</a></li>
+            <li><a href="https://www.bestchange.com/?p=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="bestchange.com"><span class="ui-icon ui-icon-triangle-1-e"></span>bestchange.com</a></li>
+            <li><a href="https://www.neobux.com/?r=ADRstars" target="_blank" title="neobux.com payment to paypal / payza"><span class="ui-icon ui-icon-triangle-1-e"></span>neobux.com payment to paypal / payza</a></li>
+            <li><a href="http://refbit.net/rid/105727" target="InlineFrame1" title="refbit.net"><span class="ui-icon ui-icon-triangle-1-e"></span>refbit.net</a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Pay to Faucethub.io</a>
+      <div class="submenu ui-widget-content">
+         <ul>
+            <li><h2>17 website</h2></li>
+            <li><a href="http://dailyfreebits.com/?id=11340358" target="InlineFrame1" title="dailyfreebits"><span class="ui-icon ui-icon-triangle-1-e"></span>dailyfreebits</a></li>
+            <li><a href="http://www.satoshididu.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="satoshididu.com"><span class="ui-icon ui-icon-triangle-1-e"></span>satoshididu.com</a></li>
+            <li><a href="http://www.pentafaucet.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="pentafaucet.com"><span class="ui-icon ui-icon-triangle-1-e"></span>pentafaucet.com</a></li>
+            <li><a href="http://bitcoinker.com/faucet?ref=70fa0dc2d5f2" target="InlineFrame1" title="bitcoinker (300 satoshi 15m)"><span class="ui-icon ui-icon-triangle-1-e"></span>bitcoinker (300 satoshi 15m)</a></li>
+            <li><a href="http://landoffaucets.com/bitcoin-faucet/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="landoffaucets"><span class="ui-icon ui-icon-triangle-1-e"></span>landoffaucets</a></li>
+            <li><a href="https://luckybtcfaucet.website/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="luckybtcfaucet.website"><span class="ui-icon ui-icon-triangle-1-e"></span>luckybtcfaucet.website</a></li>
+            <li><a href="http://www.freebtcworld.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="freebtcworld.com"><span class="ui-icon ui-icon-triangle-1-e"></span>freebtcworld.com</a></li>
+            <li><a href="http://goldbit.website/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="goldbit.website"><span class="ui-icon ui-icon-triangle-1-e"></span>goldbit.website</a></li>
+            <li><a href="http://www.mafiacoins.net/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr " target="InlineFrame1" title="mafiacoins.net"><span class="ui-icon ui-icon-triangle-1-e"></span>mafiacoins.net</a></li>
+            <li><a href="https://bituniverse.net/ref/1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="bituniverse.net"><span class="ui-icon ui-icon-triangle-1-e"></span>bituniverse.net</a></li>
+            <li><a href="https://huefaucet.xyz/ref/1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="huefaucet.xyz"><span class="ui-icon ui-icon-triangle-1-e"></span>huefaucet.xyz</a></li>
+            <li><a href="https://bitlucky.io/ref/1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="bitlucky.io"><span class="ui-icon ui-icon-triangle-1-e"></span>bitlucky.io</a></li>
+            <li><a href="http://btcfaucet.design/?ref=5579" target="InlineFrame1" title="btcfaucet.design"><span class="ui-icon ui-icon-triangle-1-e"></span>btcfaucet.design</a></li>
+            <li><a href="http://bitcoin143.com?ref=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="bitcoin143.com"><span class="ui-icon ui-icon-triangle-1-e"></span>bitcoin143.com</a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Pay to FaucetSystem</a>
+      <div class="submenu ui-widget-content">
+         <ul>
+            <li><h2>Category</h2></li>
+            <li><a href="https://huefaucet.xyz/ref/1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="huefaucet.xyz"><span class="ui-icon ui-icon-triangle-1-e"></span>huefaucet.xyz</a></li>
+            <li><a href="http://mmofaucet.freeiz.com/?r=1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr" target="InlineFrame1" title="mmofaucet.freeiz.com"><span class="ui-icon ui-icon-triangle-1-e"></span>mmofaucet.freeiz.com</a></li>
+            <li><a href="http://bitco.party/1FypJ59RKAcmSxJvJeiHrb1aPmPKmKtrKr/" target="InlineFrame1" title="bitco.party"><span class="ui-icon ui-icon-triangle-1-e"></span>bitco.party</a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Pay to XABO wallet</a>
+      <div class="submenu ui-widget-content">
+         <ul>
+            <li><h2>12 website</h2></li>
+            <li><a href="http://goldcoinjar.com/?r=ADRstars@gmail.com" target="InlineFrame1" title=" goldcoinjar.com ( 200 and 5000 satoshi each 5 minutes)"><span class="ui-icon ui-icon-triangle-1-e"></span> goldcoinjar.com ( 200 and 5000 satoshi each 5 minutes)</a></li>
+            <li><a href="https://www.ganabitsdiarios.com/?r=adrstars@gmail.com" target="InlineFrame1" title="ganabitsdiarios.com (3000 Satoshis  in 20 m)"><span class="ui-icon ui-icon-triangle-1-e"></span>ganabitsdiarios.com (3000 Satoshis  in 20 m)</a></li>
+            <li><a href="http://fieldbitcoins.com/?ref=meackzt6617652" target="InlineFrame1" title="fieldbitcoins.com"><span class="ui-icon ui-icon-triangle-1-e"></span>fieldbitcoins.com</a></li>
+         </ul>
+      </div>
+      </li>
+      <li>
+      <a href="#" class="button ui-state-default"><span class="ui-icon ui-icon-triangle-1-s"></span>Minining - invest Bitcoin</a>
+      <div class="submenu ui-widget-content">
+         <ul>
+            <li><h2>3 website</h2></li>
+            <li><a href="https://hashflare.io/r/59CFB1F0" target="_blank" title="hashflare (good company)"><span class="ui-icon ui-icon-triangle-1-e"></span>hashflare (good company)</a></li>
+            <li><a href="https://www.genesis-mining.com/a/311440" target="_blank" title="genesis mining"><span class="ui-icon ui-icon-triangle-1-e"></span>genesis mining</a></li>
+            <li><a href="www.bestchange.com" target="_blank" title="bestchange.com"><span class="ui-icon ui-icon-triangle-1-e"></span>bestchange.com</a></li>
+            <li><a href="" target="InlineFrame1" title="https://computta.com/?ref=129485"><span class="ui-icon ui-icon-triangle-1-e"></span>computta (mining your self in your device )</a></li>
+         </ul>
+      </div>
+      </li>
+   </ul>
+</div>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb11.png" alt="WYSIWYG Web Builder" style="position:absolute;left:532px;top:1695px;border-width:0;z-index:250"></a>
+<div style="z-index:3">
+<script type="text/javascript">
+var disabled_message = "No ! please .";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+</script>
+</div>
+</body>
+</html>
