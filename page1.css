@@ -18,9 +18,11 @@ body
 }
 #InlineFrame1
 {
-   border: 1px #FFFFFF solid;
+   border: 1px solid #FFFFFF;
+   margin: 0;
 }
 #InlineFrame2
 {
-   border: 1px #FFFFFF none;
+   border: 1px solid transparent;
+   margin: 0;
 }

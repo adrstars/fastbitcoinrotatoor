@@ -17,7 +17,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -30,7 +30,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -43,7 +43,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -56,7 +56,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -69,7 +69,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -86,6 +86,8 @@ body
    font-family: Arial;
    font-weight: normal;
    font-size: 13px;
+   margin: 0;
+   text-align: left;
 }
 #wb_TextMenu2 span
 {
@@ -95,9 +97,14 @@ body
 }
 #Line1
 {
-   color: #878787;
-   background-color: #878787;
-   border-width: 0;
+   border-color: #878787;
+   border-style: solid;
+   border-bottom-width: 1px;
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   height: 0 !important;
+   line-height: 0px !important;
    margin: 0;
    padding: 0;
 }
@@ -105,7 +112,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -116,8 +123,9 @@ body
 }
 #Image1
 {
-   border: 0px #000000 solid;
-   padding: 0px 0px 0px 0px;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
    left: 0;
    top: 0;
    width: 100%;
@@ -127,7 +135,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -138,30 +146,34 @@ body
 }
 #Editbox1
 {
-   border: 1px #3CB371 solid;
+   border: 1px solid #3CB371;
    background-color: transparent;
    background-image: none;
    color :#3CB371;
    font-family: Arial;
    font-weight: bold;
    font-size: 16px;
-   padding: 0px 0px 0px 0px;
+   line-height: 21px;
+   padding: 0;
+   margin: 0;
    text-align: center;
-   vertical-align: middle;
 }
 #Editbox1:focus
 {
    border-color: #66AFE9;
-   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
-   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
    outline: 0;
 }
 #Line2
 {
-   color: #878787;
-   background-color: #878787;
-   border-width: 0;
+   border-color: #878787;
+   border-style: solid;
+   border-bottom-width: 1px;
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   height: 0 !important;
+   line-height: 0px !important;
    margin: 0;
    padding: 0;
 }
@@ -169,7 +181,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -182,7 +194,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -193,17 +205,27 @@ body
 }
 #Line4
 {
-   color: #878787;
-   background-color: #878787;
-   border-width: 0;
+   border-color: #878787;
+   border-style: solid;
+   border-bottom-width: 1px;
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   height: 0 !important;
+   line-height: 0px !important;
    margin: 0;
    padding: 0;
 }
 #Line3
 {
-   color: #878787;
-   background-color: #878787;
-   border-width: 0;
+   border-color: #878787;
+   border-style: solid;
+   border-bottom-width: 1px;
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   height: 0 !important;
+   line-height: 0px !important;
    margin: 0;
    padding: 0;
 }

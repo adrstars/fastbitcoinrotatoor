@@ -17,7 +17,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px transparent solid;
+   border: 0px solid transparent;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -30,7 +30,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -43,7 +43,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -62,22 +62,21 @@ body
 }
 #Editbox1
 {
-   border: 1px #C0C0C0 solid;
+   border: 1px solid #C0C0C0;
    background-color: #FFFFFF;
    background-image: none;
    color :#000000;
    font-family: Arial;
    font-weight: normal;
    font-size: 19px;
-   padding: 0px 0px 0px 0px;
+   line-height: 33px;
+   padding: 0;
+   margin: 0;
    text-align: center;
-   vertical-align: middle;
 }
 #Editbox1:focus
 {
    border-color: #66AFE9;
-   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
-   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
    outline: 0;
 }
@@ -85,7 +84,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -98,7 +97,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -109,8 +108,9 @@ body
 }
 #Image1
 {
-   border: 0px #000000 solid;
-   padding: 0px 0px 0px 0px;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
    left: 0;
    top: 0;
    width: 100%;
@@ -118,8 +118,9 @@ body
 }
 #Image2
 {
-   border: 0px #000000 solid;
-   padding: 0px 0px 0px 0px;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
    left: 0;
    top: 0;
    width: 100%;
@@ -129,7 +130,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
@@ -142,7 +143,7 @@ body
 {
    background-color: transparent;
    background-image: none;
-   border: 0px #000000 solid;
+   border: 0px solid #000000;
    padding: 0;
    margin: 0;
    text-align: left;
